@@ -1,0 +1,26 @@
+# Public-repository GitHub Actions on the free plan.
+# Do not enable Copilot, Codespaces, LFS, or a paid GitHub plan.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch official holiday file
+        run: python3 scripts/update_holidays.py
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v

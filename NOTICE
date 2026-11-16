@@ -1,0 +1,66 @@
+NOTICE
+
+1. Original work
+
+hk-bizday
+Copyright 2026 HUGH SYNC UNIVERSE LIMITED
+
+The original code, HTTP and CLI schemas, calendar profiles, tests,
+scripts, and project documentation are licensed under the Apache
+License, Version 2.0. See LICENSE.
+
+This project is not a service of the Government of the Hong Kong
+Special Administrative Region, and it is not legal advice. It must not
+be presented as an official calendar, a government product, or as
+covering statutory holidays or weather-related work arrangements.
+
+2. Third-party data: Hong Kong Public Holidays Data
+
+The official English holiday JSON (locally saved as
+data/hk_public_holidays_en.json after a fetch) is not original to this
+project and is NOT licensed under the Apache License 2.0. It is the
+official English JSON resource of the dataset "Hong Kong Public
+Holidays Data" listed on DATA.GOV.HK, and it remains subject only to
+the DATA.GOV.HK terms of use.
+
+This repository does not include a copy of that official file. Obtain
+it only with scripts/update_holidays.py, which downloads solely the
+official DATA.GOV.HK file URL below. Do not commit the downloaded file.
+
+Dataset:
+https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal
+
+English resource page:
+https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal/resource/7ce98bb9-6330-414d-83fa-48aa4f253789
+
+Official file URL listed on DATA.GOV.HK:
+https://www.1823.gov.hk/common/ical/en.json
+
+Terms of use:
+https://data.gov.hk/en/terms-and-conditions
+
+FAQ, including the restriction on re-sale of the data:
+https://data.gov.hk/en/faq
+
+Attribution:
+Data from DATA.GOV.HK, the Government of the Hong Kong Special
+Administrative Region, the Digital Policy Office and 1823.
+
+Use of this dataset must follow the DATA.GOV.HK terms, including
+identifying the source, acknowledging the intellectual property rights
+of the Government and the relevant organisations, attributing the
+Government, the relevant organisations and DATA.GOV.HK, and not
+reselling the data. The Government is indemnified as provided in those
+terms.
+
+This project must refresh the local file only from the official
+DATA.GOV.HK file URL above. It must not scrape GovHK, 1823, or Labour
+Department website pages for redistribution. The copyright notices on
+those websites are more restrictive than the DATA.GOV.HK dataset terms
+and are not the licence for this data file.
+
+Start from data/SOURCE.template.json and data/SOURCE.template.txt.
+After a fetch, the retrieval date (Asia/Hong_Kong) and the HTTP
+Last-Modified value of the downloaded file are written to
+data/SOURCE.json and data/SOURCE.txt. Those generated files, and the
+official JSON, should not be committed.

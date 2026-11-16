@@ -1,0 +1,25 @@
+# Official DATA.GOV.HK holiday JSON. Fetch only with:
+#   python3 scripts/update_holidays.py
+# Do not commit this file.
+data/hk_public_holidays_en.json
+
+# Generated after a local or CI fetch. Start from
+# data/SOURCE.template.json and data/SOURCE.template.txt.
+data/SOURCE.json
+data/SOURCE.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# Temporary writes from the update script
+*.tmp
+data/*.tmp
+
+# Editor / OS
+.DS_Store
+*.swp

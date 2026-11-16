@@ -1,0 +1,33 @@
+Hong Kong Public Holidays Data
+This is a template. It is not a retrieval record.
+
+If data/SOURCE.json is missing, scripts/update_holidays.py reads this
+template automatically:
+
+    python3 scripts/update_holidays.py
+
+The update script downloads only the official English JSON resource
+listed on the DATA.GOV.HK dataset page. It does not scrape GovHK, 1823,
+or Labour Department website pages for redistribution. After a
+successful fetch it writes data/hk_public_holidays_en.json and a new
+data/SOURCE.json, and fills data/SOURCE.txt with the retrieval date
+(Asia/Hong_Kong) and the HTTP Last-Modified value. It does not change
+this template.
+
+DATA.GOV.HK dataset:
+https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal
+
+English resource page:
+https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal/resource/7ce98bb9-6330-414d-83fa-48aa4f253789
+
+Official file URL listed on DATA.GOV.HK:
+https://www.1823.gov.hk/common/ical/en.json
+
+Local file (generated, do not commit): data/hk_public_holidays_en.json
+
+Terms of use:
+https://data.gov.hk/en/terms-and-conditions
+
+Attribution:
+Data from DATA.GOV.HK, the Government of the Hong Kong Special
+Administrative Region, the Digital Policy Office and 1823.
